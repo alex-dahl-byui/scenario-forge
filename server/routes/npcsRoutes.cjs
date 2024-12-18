@@ -41,7 +41,7 @@ router.put("/:id", (req, res, next) => {
   NPC.findOne({ id: req.params.id })
     .then((npc) => {
       npc.name = req.body.name;
-      npc.children = req.body.children;
+      npc.description = req.body.description;
 
       NPC.updateOne({ id: req.params.id }, npc)
         .then((result) => {

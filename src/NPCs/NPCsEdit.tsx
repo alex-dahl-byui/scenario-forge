@@ -25,10 +25,12 @@ export const NPCsEdit = () => {
     }
   }, [getNPC, id]);
 
+  console.log(description);
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     event.stopPropagation();
 
+    debugger;
     if (id) {
       updateNPC(originalNPCId, {
         name,
